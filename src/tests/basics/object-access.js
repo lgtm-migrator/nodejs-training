@@ -2,7 +2,7 @@
 const { Random } = require('mockjs');
 
 const description = `
-dynamic object access
+访问object中的属性
 
 input       output
 
@@ -23,14 +23,14 @@ module.exports = {
     runner: async (f) => {
 
         for (let i = 0; i < 15; i++) {
-            const n = Random.name();
+            const n = Random.word();
             const v = Random.integer(1, 100);
             expect(f({ [n]: v }, n)).toEqual(v);
         }
 
         for (let i = 0; i < 15; i++) {
-            const n = Random.name();
-            const n2 = Random.name();
+            const n = Random.word();
+            const n2 = Random.word();
 
             const v = Random.integer(1, 100);
             expect(f({ [n]: v }, n2)).toEqual(null);

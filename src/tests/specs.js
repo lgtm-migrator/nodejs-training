@@ -1,5 +1,6 @@
 
 module.exports = [
-    require('./basics')
+    require('./basics'),
+    require('./es6')
 ];
 

@@ -2,7 +2,7 @@
 const { Random } = require('mockjs');
 
 const description = `
-remove object prop
+从object中移除对应属性
 
 input       output
 
@@ -23,14 +23,14 @@ module.exports = {
     runner: async (f) => {
 
         for (let i = 0; i < 15; i++) {
-            const n = Random.name();
+            const n = Random.word();
             const v = Random.integer(1, 100);
             expect(f({ [n]: v }, n), `prop ${n} should be removed from object`).not.toHaveProperty(n);
         }
 
         for (let i = 0; i < 15; i++) {
-            const n = Random.name();
-            const n2 = Random.name();
+            const n = Random.word();
+            const n2 = Random.word();
 
             const v = Random.integer(1, 100);
             expect(f({ [n]: v }, n2), `object should keep the prop ${n}`).toHaveProperty(n);
