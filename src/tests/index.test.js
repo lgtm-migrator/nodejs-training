@@ -22,14 +22,14 @@ describe('mandatory check', () => {
 
 });
 
-const executeSpecs = specsSource => {
+const executeSpecs = (specsSource, prefix = '') => {
 
     const specs = eval(specsSource); // dynamic generate test cases
 
     specs.forEach(group => {
         describe(group.title, () => {
             group.specs.forEach(spec => {
-                it(`spec: ${spec.title}`, async () => {
+                it(`${prefix}spec: ${spec.title}`, async () => {
                     const p = path.join(__dirname, '../cases', group.title, spec.title, 'index.js');
                     if (!fs.existsSync(p)) {
                         console.info(`not found test case for ${spec.title}, create it`);
@@ -59,10 +59,9 @@ if (fs.existsSync(path.join(__dirname, '../../training.config.json'))) {
         }
     } else { // trainer
         if (fs.existsSync(localBundleTestsPath)) { // if local bundle file generated
-            executeSpecs(require(localBundleTestsPath));
-        } else { // fallback
-            executeSpecs(require('./specs'));
+            executeSpecs(require(localBundleTestsPath), 'bundle-');
         }
+        executeSpecs(require('./specs'), 'module-');
     }
 
 

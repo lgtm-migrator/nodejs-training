@@ -1,8 +1,8 @@
 {
-    "author": "",
-    "specs": "https://couchdb.eu-central.fornever.org/training_spec/training001",
+    "author": "Theo Sun",
+    "specs": "https://couchdb.eu-central.fornever.org/training_spec/cim-training",
     "callback": "https://couchdb.eu-central.fornever.org/training_result",
-    "role": "trainee",
+    "role": "trainer",
     "credential": {
         "username": "training",
         "password": "training"
