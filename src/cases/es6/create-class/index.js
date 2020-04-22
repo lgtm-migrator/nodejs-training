@@ -11,24 +11,18 @@ input           output
 */
 
 
-module.exports = () => {
+module.exports = class {
+    constructor(name) {
+        this.setName(name);
+    }
 
-    const c = class {
-        constructor(name) {
-            this.setName(name);
-        }
+    setName(name) {
+        this.name = name;
+        this.size = name.length;
+    }
 
-        setName(name) {
-            this.name = name;
-            this.size = name.length;
-        }
-
-        getSize() {
-            return this.size;
-        }
-
-    };
-
-    return c;
+    getSize() {
+        return this.size;
+    }
 
 };

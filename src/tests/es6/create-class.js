@@ -11,13 +11,7 @@ const description = `
 `;
 
 const template = `
-module.exports = () => {
-
-    const c = class {
-
-    };
-
-    return c;
+module.exports = class {
 
 };
 `;
@@ -28,7 +22,7 @@ module.exports = {
     description,
     template,
     runner: async (f) => {
-        const clazz = f();
+        const clazz = f;
         expect(typeof clazz).toBe('function');
 
         const text1 = Random.paragraph();
