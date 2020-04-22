@@ -32,7 +32,7 @@ module.exports = {
         };
 
         const cb = (arr) => {
-            expect(arr).toStrictEqual(arr_assert);
+            expect(arr, 'result not correct').toStrictEqual(arr_assert);
         };
 
         f(f1, arr, cb);
