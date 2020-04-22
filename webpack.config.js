@@ -6,6 +6,7 @@ module.exports = {
     target: 'node',
     mode: 'production',
     externals: [nodeExternals()],
+    devtool: 'inline-source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'specs.bundle.js',
