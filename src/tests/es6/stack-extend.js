@@ -15,7 +15,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/thr
 
 const template = `
 
-const Stack = require('./Stack');
+const Stack = require('../stack');
 
 module.exports = class LimitedStack {
 
