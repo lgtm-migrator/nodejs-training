@@ -13,7 +13,7 @@ dd, day of month, 1 .... 30 (31)
 const d = new Date("2020-01-01")
 const f = 'dd-dd-dd-yyyy'
 
-formatDate(d, f) // 01-01-01-2020
+formatDate(d, f) // 1-1-1-2020
 
 please ref: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
 
