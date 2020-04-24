@@ -3,8 +3,8 @@ const { Random } = require('mockjs');
 const description = `
 s是一个字符串
 
-正常情况下 s的格式为 ID-NAME[USERNAME]:{DATE} (字符串不会含有空格换行符等)
-例如 1-Alice,[ALICE1]:{20202020}
+正常情况下 s的格式为 ID-NAME[USERNAME]:DATE (字符串不会含有空格换行符等)
+例如 1-Alice,[ALICE1]:20202020
 
 异常情况下 s的格式任意
 

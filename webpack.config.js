@@ -14,7 +14,7 @@ module.exports = {
     },
     node: {
         global: false,
-        __filename: true,
-        __dirname: true,
+        __filename: false,
+        __dirname: false,
     }
 };
