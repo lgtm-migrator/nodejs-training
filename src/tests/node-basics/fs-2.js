@@ -11,7 +11,7 @@ const description = `
     "port": 22233
 }
 
-请返回一个字符串, 格式为
+请返回一个字符串, 格式为host:port
 
 可能使用到的API:
 require或者fs
