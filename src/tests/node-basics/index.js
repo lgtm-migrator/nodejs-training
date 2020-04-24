@@ -10,5 +10,6 @@ module.exports = {
         require('./event-2'),
         require('./fs-1'),
         require('./fs-2'),
+        require('./http-1'),
     ]
 };
