@@ -5,6 +5,7 @@ module.exports = {
         require('./event-loop'),
         require('./express-questions'),
         require('./npm-project'),
-        require('./debug')
+        require('./debug'),
+        require('./express-with-sqlite')
     ]
 };

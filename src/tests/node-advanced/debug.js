@@ -2,7 +2,7 @@
 const description = `
 请对当前script进行debug(F5)
 
-请返回i == 5时, tmp的值
+请返回i == 5时，循环体执行完前, tmp的值
 `;
 
 const template = `
