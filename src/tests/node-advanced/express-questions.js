@@ -1,5 +1,9 @@
 
 const description = `
+请将session-5-example/express运行起来，手动尝试调用每个API
+
+然后回答如下问题
+
 请回答如下问题判断题
 
 1. express的handler中必须定义一个path
