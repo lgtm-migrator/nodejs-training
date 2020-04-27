@@ -4,6 +4,7 @@ module.exports = {
     specs: [
         require('./event-loop'),
         require('./express-questions'),
-        require('./npm-project')
+        require('./npm-project'),
+        require('./debug')
     ]
 };

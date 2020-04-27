@@ -15,8 +15,9 @@ Response Body: {"reversed": "emanresu"}
 
 可能用到的API
 https://expressjs.com/zh-cn/api.html#express.json
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
 
-完成后返回true
+完成后返回修改本用例使其返回true
 `;
 
 const template = `

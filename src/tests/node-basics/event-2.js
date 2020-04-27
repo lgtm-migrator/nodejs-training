@@ -18,7 +18,7 @@ const template = `
 module.exports = async (emitter) => {
 
     return new Promise((resolve, reject) => {
-
+        resolve(null);
     });
 
 };
