@@ -24,27 +24,32 @@ module.exports = {
     description,
     template,
     runner: async (f) => {
-        const value1 = Random.word();
-        const value2 = Random.word();
-        const value3 = value1 + value2;
 
-        let f1Invoked = false;
+        return new Promise(resolve => {
+            const value1 = Random.word();
+            const value2 = Random.word();
+            const value3 = value1 + value2;
 
-        const cb = (v) => {
-            expect(v, 'value is not equal').toEqual(value3);
-        };
+            let f1Invoked = false;
 
-        const p1 = () => {
-            f1Invoked = true;
-            return new Promise(res => res(value1));
-        };
+            const cb = (v) => {
+                expect(v, 'value is not equal').toEqual(value3);
+                resolve();
+            };
 
-        const p2 = (v = '') => {
-            return new Promise(res => res(v + value2));
-        };
+            const p1 = () => {
+                f1Invoked = true;
+                return new Promise(res => res(value1));
+            };
 
-        f(p1, p2, cb);
+            const p2 = (v = '') => {
+                return new Promise(res => res(v + value2));
+            };
 
-        expect(f1Invoked, "you must at least call the 'p1' function").toBeTruthy();
+            f(p1, p2, cb);
+
+            expect(f1Invoked, "you must at least call the 'p1' function").toBeTruthy();
+        });
+
     }
 };
