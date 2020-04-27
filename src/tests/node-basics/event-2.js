@@ -10,7 +10,8 @@ const description = `
 * data: (string) => void
 * end: () => void
 
-当emitter接收到end事件时, 请将之前接收到的data数组按顺序返回(resolve)
+event: data会被触发多次，每次会传入一个字符串
+event: end会被触发一次，当emitter接收到end事件时, 请将之前data事件中的接收到的所有字符串，组成一个数组，按顺序返回(resolve)
 
 `;
 
