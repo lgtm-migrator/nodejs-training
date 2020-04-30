@@ -13,8 +13,19 @@ f1没有参数, f2有一个参数
 */
 
 
+// module.exports = (f1, f2, cb) => {
+//     f1()
+//         .then(v => f2(v))
+//         .then(cb);
+// };
+
+/**
+ * @param {()=>Promise} f1
+ * @param {(value)=>Promise} f2
+ * @param {(value2)=>void} cb
+ */
 module.exports = (f1, f2, cb) => {
     f1()
-        .then(v => f2(v))
+        .then(result => f2(result))
         .then(cb);
 };

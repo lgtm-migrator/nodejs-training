@@ -13,6 +13,11 @@ f1没有参数, f2有一个参数
 `;
 
 const template = `
+/**
+ * @param {()=>Promise} f1
+ * @param {(value)=>Promise} f2
+ * @param {(value2)=>void} cb
+ */
 module.exports = (f1, f2, cb) => {
 
 };
