@@ -49,6 +49,7 @@ if (fs.existsSync(path.join(__dirname, '../../training.config.json'))) {
 
     const remoteTestsTempPath = tempLink(c.specs);
     const localBundleTestsPath = path.join(__dirname, '../../dist/specs.bundle.js');
+    const localModuleTestsPath = path.join(__dirname, './specs.js');
 
     if (c.role == 'trainee') { // if remote specs setup
         try {
@@ -61,7 +62,9 @@ if (fs.existsSync(path.join(__dirname, '../../training.config.json'))) {
         if (fs.existsSync(localBundleTestsPath)) { // if local bundle file generated
             executeSpecs(require(localBundleTestsPath), 'bundle-');
         }
-        executeSpecs(require('./specs'), 'module-');
+        if (fs.existsSync(localModuleTestsPath)) {
+            executeSpecs(require(localModuleTestsPath), 'module-');
+        }
     }
 
 

@@ -17,7 +17,8 @@
 
 ### For Trainer
 
-* maintain the `role` in the `training.config.json` file
+* remove `cases` directory
+* maintain the `role` in the `training.config.json` file (as `trainee`)
 * maintain the `specs` in the `training.config.json` file, replace the `training001` with a unique id like `corp-a-b-training-001`
 * maintain the `specs` definitions in `src/tests` like `src/tests/basics/sum-1.js`
 * self test

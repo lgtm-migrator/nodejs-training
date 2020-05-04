@@ -108,3 +108,4 @@ lib
 
 # run
 *.db
+.DS_Store

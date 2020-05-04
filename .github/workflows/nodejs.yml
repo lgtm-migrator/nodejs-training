@@ -21,11 +21,20 @@ jobs:
       run: |
         npm install
         npm run lint
-        npm run download
+        npm run build
         npm run test
+        npm run generate
       env:
         CI: true
         NO_AUTHOR_CHECK: true
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        # Artifact name
+        name: Trainee Package
+        # Directory containing files to upload
+        path: dist/trainee.zip
 
     - name: upload coverage
       uses: codecov/codecov-action@v1
