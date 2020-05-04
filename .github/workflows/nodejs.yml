@@ -32,7 +32,7 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         # Artifact name
-        name: Trainee Package
+        name: trainee-package
         # Directory containing files to upload
         path: dist/trainee.zip
 
